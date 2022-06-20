@@ -1,8 +1,8 @@
-//card
-VanillaTilt.init(document.querySelectorAll(".card-item"), {
-  max: 25,
-  speed: 400,
-});
+// //card
+// VanillaTilt.init(document.querySelectorAll(".card-item"), {
+//   max: 25,
+//   speed: 400,
+// });
 
 //AOS import
 AOS.init();
@@ -21,7 +21,8 @@ const illo = new Zdog.Illustration({
 
 let cat = new Zdog.Anchor({
   addTo: illo,
-  translate: { y: 20 },
+  translate: { x: -100, y: 20 },
+  rotate: { y: 45 },
 });
 
 let catBody = new Zdog.Shape({
@@ -422,7 +423,7 @@ let circleAnchor = new Zdog.Anchor({
 // })
 
 function animate() {
-  cat.rotate.x -= 0.08;
+  cat.rotate.z += 0.04;
   electAnchor.rotate.z += 0.02;
   electAnchor2.rotate.z += 0.008;
   electAnchor3.rotate.z += 0.01;

@@ -362,13 +362,12 @@ h1 {
 .table {
   overflow: hidden;
   width: 100%;
-  height: 200px;
   background-color: $yellow;
   box-shadow: inset 0 50px rgba(#d8b541, 1);
   position: relative;
   top: 0;
   z-index: 0;
-  padding: 100px 0;
+  padding: 120px 0;
   .detail {
     margin-top: 48px;
     display: flex;
@@ -387,9 +386,14 @@ h1 {
 }
 
 .question {
-  padding: 64px 0;
+  padding: 140px 0;
+  overflow: hidden;
   h3 {
     font-family: "Titan One", cursive;
+    font-size: 6rem;
+    color: $blue;
+    position: absolute;
+    bottom: 10px;
   }
   .card-list {
     display: flex;
@@ -399,24 +403,25 @@ h1 {
     position: relative;
     &::after {
       content: "";
-      width: 300px;
-      height: 300px;
+      width: 150px;
+      height: 150px;
       position: absolute;
-      background-image: linear-gradient(to top, #0fd850 0%, #f9f047 100%);
-      left: -200px;
+      background-image: linear-gradient(60deg, #64b3f4 0%, #c2e59c 100%);
+      left: -100px;
       bottom: -50px;
       border-radius: 50%;
       z-index: -1;
-      opacity: 0.5;
+      opacity: 0.8;
     }
     .card-item {
       width: 330px;
       height: 450px;
-      background-color: rgba(#fff, 0.5);
+      background-color: rgba(#fff, 0.8);
       border-radius: 20px;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: space-between;
+      padding: 100px 0;
       align-items: center;
       backdrop-filter: blur(3px);
       border-top: #fff solid 1px;
@@ -433,9 +438,8 @@ h1 {
 .scroll {
   overflow: hidden;
   display: flex;
-  width: 100%;
   line-height: normal;
-  font-size: 4rem;
+  font-size: 5rem;
   font-weight: 900;
   color: #f9d555;
   background-color: #111;
@@ -480,6 +484,34 @@ h1 {
   }
 }
 
+.zdog-canvas {
+  background-color: $blue;
+  display: block;
+  width: 100%;
+}
+
+.happen {
+  padding-bottom: 100px;
+  .detail {
+    margin-top: 100px;
+  }
+}
+
+.result {
+  background-color: $yellow;
+  padding: 100px 0;
+  p + p {
+    margin-top: 16px;
+  }
+}
+
+footer {
+  background-color: #333;
+  padding: 24px 0;
+  p {
+    font-size: 0.8rem;
+  }
+}
 // * {
 //   outline: solid 1px;
 // }

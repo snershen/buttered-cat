@@ -1,8 +1,10 @@
-// //card
-// VanillaTilt.init(document.querySelectorAll(".card-item"), {
-//   max: 25,
-//   speed: 400,
-// });
+let what = document.querySelector(".what");
+let whatText = document.querySelector(".what p");
+function whatFadeUp() {
+  what.classList.add("what-differ");
+  whatText.classList.add("whatText-differ");
+}
+what.addEventListener("mousemove", whatFadeUp);
 
 //AOS import
 AOS.init();

@@ -277,7 +277,7 @@ h1 {
     bottom: 50px;
     font-size: 4rem;
     color: $blue;
-    opacity: 0.5;
+    opacity: 0.7;
   }
   .card-list {
     display: flex;
@@ -317,8 +317,9 @@ h1 {
       background-color: rgba($white, 0.82);
       border-radius: 20px;
       backdrop-filter: blur(3px);
-      border-top: $white solid 1px;
-      border-left: $white solid 1px;
+      // border-top: $white solid 1px;
+      // border-left: $white solid 1px;
+      box-shadow: 0 0 0 5px white, 0 0 0 12px rgba($yellow, 0.8);
     }
     p {
       font-size: 10rem;
@@ -326,52 +327,77 @@ h1 {
   }
 }
 
-.scroll {
-  display: flex;
-  font-size: 6rem;
-  font-weight: 900;
-  color: $yellow;
-  background-color: $black;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-.scroll div {
-  animation: scroll-ani 40s -40s linear infinite;
-}
-
-.scroll span {
-  color: $white;
-}
-
-.scroll + .scroll {
-  position: absolute;
-  bottom: 0;
-}
-
-@keyframes scroll-ani {
-  0% {
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%);
-  }
-  100% {
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
+.what {
+  // background-color: $black;
+  padding: 200px 300px;
+  clip-path: circle(300px at 50% 50%);
+  background-color: $yellow;
+  transition: 1s;
+  p {
+    transform: rotate(30deg);
+    margin-left: 100px;
+    font-size: 8rem;
+    line-height: 1;
+    font-family: "Titan One", cursive;
+    transition: 0.5s;
+    color: $blue;
+    text-transform: uppercase;
   }
 }
 
-.scroll div:nth-child(2) {
-  animation: scroll-ani2 40s -20s linear infinite;
+.what-differ {
+  clip-path: circle(2000px at 50% 50%);
 }
+.whatText-differ {
+  transform: rotate(-10deg) !important;
+  text-shadow: 8px 8px 0 orange;
+}
+// .scroll {
+//   display: flex;
+//   font-size: 6rem;
+//   font-weight: 900;
+//   color: $yellow;
+//   background-color: $black;
+//   white-space: nowrap;
+//   overflow: hidden;
+// }
 
-@keyframes scroll-ani2 {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-200%);
-  }
-}
+// .scroll div {
+//   animation: scroll-ani 40s -40s linear infinite;
+// }
+
+// .scroll span {
+//   color: $white;
+// }
+
+// .scroll + .scroll {
+//   position: absolute;
+//   bottom: 0;
+// }
+
+// @keyframes scroll-ani {
+//   0% {
+//     -webkit-transform: translateX(100%);
+//     transform: translateX(100%);
+//   }
+//   100% {
+//     -webkit-transform: translateX(-100%);
+//     transform: translateX(-100%);
+//   }
+// }
+
+// .scroll div:nth-child(2) {
+//   animation: scroll-ani2 40s -20s linear infinite;
+// }
+
+// @keyframes scroll-ani2 {
+//   0% {
+//     transform: translateX(0);
+//   }
+//   100% {
+//     transform: translateX(-200%);
+//   }
+// }
 
 .zdog-canvas {
   display: block;

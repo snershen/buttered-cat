@@ -1,13 +1,8 @@
 $yellow: #f9d555;
+$dark-yellow: darken($yellow, 16%);
 $blue: #004c77;
 $white: #fff;
-$black: #111;
+$black: #222;
 
-$font-m: 16px;
-$font-l: $font-m * 1.5;
-$font-xl: $font-l * 1.5;
-
-$font-family-english: "Titan One, cursive";
-$font-family-chinese: "Titan One, cursive";
-
-$spacer: 16px;
+$font-family-eng: "Titan One", cursive;
+$font-family-chi: "Noto Sans TC", sans-serif;

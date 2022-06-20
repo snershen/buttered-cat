@@ -2,15 +2,18 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  user-select: none;
+  cursor: crosshair;
 }
 
 body {
   background-color: $blue;
   line-height: 1.5;
-  color: #333;
+  color: $black;
+  font-family: $font-family-chi;
 }
 
 p {
   pointer-events: none;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }

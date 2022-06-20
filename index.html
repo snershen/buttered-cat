@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -8,16 +8,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500;700;900&family=Titan+One&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;500;700;900&family=Titan+One&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/all.css" />
   </head>
+
   <body>
     <section class="banner">
       <div class="butter">
         <div class="container">
-          <h1>Buttered Cat</h1>
+          <h1 class="text-c font-eng text-bold">Buttered Cat</h1>
         </div>
         <div class="butter-melt"></div>
         <div class="butter-melt"></div>
@@ -52,28 +53,13 @@
             stroke-linecap="round"
           />
         </svg>
-        <!-- <div class="cat-tail">
-          <div class="cat-tail">
-            <div class="cat-tail">
-              <div class="cat-tail">
-                <div class="cat-tail">
-                  <div class="cat-tail">
-                    <div class="cat-tail">
-                      <div class="cat-tail"><div class="cat-tail"></div></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> -->
       </div>
     </section>
     <section class="intro text-blue">
       <div class="table">
         <div class="container-s">
           <div class="title" data-aos="fade-up">
-            <h2 class="title-1 text-c mb-1 text-bold">
+            <h2 class="text-c mb-1 title-1 text-heavy">
               什麼是「奶油貓悖論」？
             </h2>
             <p class="text-c">
@@ -81,11 +67,12 @@
             </p>
           </div>
           <div class="detail" data-aos="fade-up">
-            <p>
-              <img src="img/number1.png" alt="" /> 貓從空中落下，永遠用腳著陸
+            <p class="text-bold">
+              <img src="img/number1.png" alt="第1項" />
+              貓從空中落下，永遠用腳著陸
             </p>
-            <p>
-              <img src="img/number2.png" alt="" />
+            <p class="text-bold">
+              <img src="img/number2.png" alt="第2項" />
               把塗上奶油的吐司拋到半空中<br />永遠是塗上奶油的一面落地
             </p>
           </div>
@@ -96,28 +83,28 @@
     <section class="question">
       <div class="container">
         <div class="title" data-aos="fade-up">
-          <h2 class="title-1 text-yellow text-c mb-4">
+          <h2 class="text-c mb-4 title-1 text-bold text-yellow">
             如果把塗著奶油的吐司<br />綁在貓咪的背部......
           </h2>
-          <p class="text-c text-white">
-            吐司沒有塗奶油的那面接觸貓咪背部，有塗的那面朝上
+          <p class="text-c text-light text-white">
+            吐司沒塗奶油的那面接觸貓咪背部，有塗的那面則朝上
           </p>
         </div>
         <div class="card-list">
           <div class="card-item" data-aos="fade-right">
-            <img src="img/cat.png" alt="" />
-            <h3 class="title-1">CAT</h3>
+            <img src="img/cat.png" alt="一隻貓咪" />
+            <h3 class="title-1 font-eng">CAT</h3>
           </div>
-          <p>+</p>
+          <p class="text-white text-bold">+</p>
           <div class="card-item" data-aos="fade-left">
-            <img src="img/toast.png" alt="" />
-            <h3 class="title-1">Toast</h3>
+            <img src="img/toast.png" alt="一片吐司" />
+            <h3 class="title-1 font-eng">Toast</h3>
           </div>
         </div>
       </div>
     </section>
 
-    <div class="scroll">
+    <div class="scroll font-eng">
       <div>
         What<span>&nbsp;will</span>&nbsp;happen?
         What<span>&nbsp;will</span>&nbsp;happen?
@@ -138,33 +125,40 @@
 
     <section class="happen">
       <div class="container">
-        <p class="detail text-c text-white mb-4" data-aos="fade-up">
+        <p class="detail text-c mb-4 text-light text-white" data-aos="fade-up">
           塗奶油的吐司落地時，貓咪的身體會翻轉過來<br />貓咪要落地時，塗奶油的吐司又會再翻轉回來<br />當兩者都無法落地時，便能形成——<br />
         </p>
-        <p class="title-1 text-yellow text-c" data-aos="fade-up">
-          不需要燃料的「永動機」。
+        <p class="text-c title-1 text-bold text-yellow" data-aos="fade-up">
+          不需要輸入能量的「永動機」。
         </p>
       </div>
-      <canvas class="zdog-canvas" width="400" height="250"></canvas>
+      <canvas
+        class="zdog-canvas"
+        width="400"
+        height="250"
+        style="cursor: move"
+      ></canvas>
       <div class="container">
-        <p class="text-c text-white">
-          \ 這樣地球就有滿滿的燃料啦，喵皇又拯救世界了呀呼！ /
+        <p class="text-c text-light text-white title-3">
+          \ 這樣地球就有滿滿的能源啦，喵皇又拯救世界了耶呼！ /
         </p>
       </div>
     </section>
     <section class="result">
       <div class="container">
-        <p class="title-2 text-blue text-c text-bold" data-aos="fade-up">
+        <p class="text-c title-2 text-heavy text-blue" data-aos="fade-up">
           .......以上當然不可能成立。
         </p>
-        <p class="text-blue text-c" data-aos="fade-up">
+        <p class="text-c text-blue" data-aos="fade-up">
           此悖論僅止於思考實驗，沒有任何貓咪受傷 :)
         </p>
       </div>
     </section>
     <footer>
       <div class="container">
-        <p class="text-yellow text-c">Yi Chen Wu © All Rights Reserved.</p>
+        <p class="text-c text-light text-white">
+          Yi Chen Wu © All Rights Reserved.
+        </p>
       </div>
     </footer>
 

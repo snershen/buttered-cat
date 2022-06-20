@@ -2,3 +2,16 @@
   width: $w;
   height: $h;
 }
+
+//RWD
+@mixin pad {
+  @media screen and (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: 576px) {
+    @content;
+  }
+}

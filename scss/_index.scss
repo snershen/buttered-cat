@@ -1,51 +1,41 @@
 h1 {
-  line-height: 200px;
-  text-align: center;
-  font-size: 6rem;
-  font-weight: 900;
-  color: $blue;
-  font-family: "Titan One", cursive;
   position: relative;
   z-index: 10;
+  line-height: 200px;
+  font-size: 6rem;
   text-transform: uppercase;
+  color: $blue;
 }
 
 .banner {
-  height: 90vh;
-  width: 100%;
+  @include size(100%, 90vh);
   background-color: $blue;
 }
 
 .butter {
   position: relative;
-  height: 200px;
-  width: 100%;
+  @include size(100%, 200px);
   background-color: $yellow;
   border-radius: 0 0 100px 100px;
   &-melt {
     position: absolute;
-    width: 30px;
-    height: 200px;
     bottom: -80px;
     left: 12%;
-    border-radius: 12px 12px 20px 20px;
+    @include size(30px, 200px);
     background-color: $yellow;
+    border-radius: 12px 12px 20px 20px;
     box-shadow: -72px -20px 0 5px $yellow, 40px -50px $yellow,
       -34px 100px 0 4px $blue;
     &:nth-child(2) {
       width: 20px;
       left: 28%;
       bottom: -60px;
-      border-radius: 12px 12px 20px 20px;
-      background-color: $yellow;
       box-shadow: 46px -20px 0 5px $yellow, 20px 130px 0 1px $blue;
     }
     &:nth-child(3) {
       width: 20px;
       left: 55%;
       bottom: -60px;
-      border-radius: 12px 12px 20px 20px;
-      background-color: $yellow;
       box-shadow: -72px -20px 0 5px $yellow, 40px -30px $yellow,
         70px 30px 0 4px $yellow, -34px 140px 0 14px $blue;
     }
@@ -53,8 +43,6 @@ h1 {
       width: 20px;
       left: 88%;
       bottom: -60px;
-      border-radius: 12px 12px 20px 20px;
-      background-color: $yellow;
       box-shadow: 50px -20px 0 5px $yellow, -30px 20px 0 -3px $yellow,
         22px 130px 0 4px $blue;
     }
@@ -134,110 +122,37 @@ h1 {
   }
 }
 
-// .butter-solid {
-//   height: 200px;
-//   left: 100px;
-//   width: 40px;
-//   background-color: $yellow;
-//   position: absolute;
-//   bottom: -50px;
-//   border-radius: 0 0 100px 100px;
-//   &:nth-child(2) {
-//     width: 60px;
-//     bottom: -100px;
-//     left: 160px;
-//     // animation: solid1 3s ease-in infinite alternate;
-//   }
-//   &:nth-child(3) {
-//     position: absolute;
-//     left: 40%;
-//   }
-//   &:nth-child(4) {
-//     position: absolute;
-//     left: 48%;
-//     width: 36px;
-//     bottom: -80px;
-//   }
-//   &:nth-child(5) {
-//     position: absolute;
-//     left: 60%;
-//     bottom: -70px;
-//     // animation: solid1 2s ease-in infinite alternate;
-//   }
-//   &:nth-child(6) {
-//     position: absolute;
-//     left: 65%;
-//     width: 50px;
-//     bottom: -50px;
-//   }
-//   &:nth-child(7) {
-//     position: absolute;
-//     left: 80%;
-//   }
-//   &:nth-child(8) {
-//     position: absolute;
-//     left: 92%;
-//   }
-// }
-
-// .butter-circle {
-//   position: absolute;
-//   width: 30px;
-//   height: 60px;
-//   bottom: -20px;
-//   background-color: $yellow;
-//   animation: circle1 3s 1.8s ease-in infinite;
-//   border-radius: 30px 30px 30px 30px;
-// }
-
-@keyframes solid1 {
-  to {
-    bottom: -120px;
-  }
-}
-
-@keyframes circle1 {
-  to {
-    bottom: -400px;
-    width: 16px;
-    height: 70px;
-  }
-}
-
 .cat {
   position: absolute;
   left: 65%;
-  transform: translateX(-50%) scale(1.2);
   bottom: 50px;
+  transform: translateX(-50%) scale(1.2);
   animation: cat-move 1s infinite alternate;
   &-face {
     position: relative;
-    @include size(400px, 250px);
-    background-color: $yellow;
-    border-radius: 200px 200px;
     bottom: 100px;
     z-index: 1;
-    box-shadow: inset -16px 0 rgba(#d8b541, 1);
+    @include size(400px, 250px);
+    background-color: $yellow;
+    box-shadow: inset -16px 0 rgba($dark-yellow, 1);
+    border-radius: 200px 200px;
   }
   &-ear {
-    // width: 0;
-    // height: 0;
+    position: absolute;
+    top: -50px;
+    left: 50px;
+    z-index: -2;
     border-style: solid;
     border-width: 0 100px 80px 50px;
     border-color: transparent transparent $yellow transparent;
-    // transform: scale(1);
-    position: absolute;
-    z-index: -2;
-    top: -50px;
-    left: 50px;
     &:before {
       content: "";
-      border-style: solid;
-      border-width: 0 30px 30px 10px;
-      border-color: transparent transparent $white transparent;
       position: absolute;
       left: -10px;
       top: 20px;
+      border-style: solid;
+      border-width: 0 30px 30px 10px;
+      border-color: transparent transparent $white transparent;
     }
   }
   .cat-ear + .cat-ear {
@@ -245,73 +160,55 @@ h1 {
     border-width: 0 80px 80px 40px;
   }
   &-eye {
-    @include size(16px);
-    background-color: $blue;
-    border-radius: 50%;
     position: absolute;
     top: 120px;
     left: 230px;
+    @include size(16px);
+    background-color: $blue;
+    border-radius: 50%;
     animation: cat-eye 4s infinite;
   }
   .cat-eye + .cat-eye {
     left: 190px;
   }
   &-nose {
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 20px 12px 0 12px;
-    border-color: $blue transparent transparent transparent;
     position: absolute;
     top: 150px;
     left: 208px;
+    border-style: solid;
+    border-width: 20px 12px 0 12px;
+    border-color: $blue transparent transparent transparent;
   }
   &-whiskers {
     &-item {
       position: absolute;
-      @include size(90px, 10px);
       left: 50px;
       top: 120px;
+      @include size(90px, 10px);
       transform: rotate(10deg);
       background-color: $blue;
       border-radius: 20px 20px;
     }
   }
   .cat-whiskers-item + .cat-whiskers-item {
-    transform: rotate(-10deg);
     top: 160px;
+    transform: rotate(-10deg);
   }
   .cat-whiskers-right {
-    transform: rotate(180deg);
     position: absolute;
     left: 420px;
     top: 290px;
+    transform: rotate(180deg);
   }
   &-body {
-    @include size(750px, 250px);
-    background-color: $yellow;
     position: absolute;
     right: 80px;
     bottom: 0;
+    @include size(750px, 250px);
+    background-color: $yellow;
     border-radius: 40% 100px 10% 0%/100% 50% 30% 0%;
-    box-shadow: inset -10px 0 rgba(#d8b541, 1);
+    box-shadow: inset -10px 0 rgba($dark-yellow, 1);
   }
-  // & > .cat-tail {
-  //   left: -350px;
-  //   top: 60px;
-  // }
-  // &-tail {
-  //   position: absolute;
-  //   top: 0;
-  //   left: -10px;
-  //   width: 40px;
-  //   height: 30px;
-  //   border-radius: 80px 80px;
-  //   background-color: $yellow;
-  //   // transform: rotate(45deg);
-  //   animation: cat-tail 400ms infinite alternate ease-in-out;
-  //   transform-origin: bottom center;
-  // }
   svg,
   .cat-tail {
     position: absolute;
@@ -320,8 +217,6 @@ h1 {
     transition: 0.2s;
     animation: cat-tail 1s infinite alternate;
     transform: scale(0.9);
-    // background-color: #111;
-    // left: 0;
   }
 }
 
@@ -335,29 +230,15 @@ h1 {
   to {
     animation-timing-function: step-end;
     @include size(16px);
-    // opacity: 1;
   }
   50%,
   55% {
     animation-timing-function: step-start;
-    // opacity: 0;
     @include size(18px, 5px);
     margin-top: 6px;
     border-radius: 20px 20px;
   }
 }
-
-// @keyframes cat-shock {
-//   90% {
-//     transform: translateX(-50%) scale(1.2) rotate(1deg);
-//   }
-//   95% {
-//     transform: translateX(-50%) scale(1.2) rotate(-1deg);
-//   }
-//   100% {
-//     transform: translateX(-50%) scale(1.2) rotate(1deg);
-//   }
-// }
 
 @keyframes cat-tail {
   to {
@@ -365,30 +246,18 @@ h1 {
   }
 }
 
-// @keyframes cat-tail {
-//   0% {
-//     transform: rotate(8deg);
-//     // box-shadow: inset 8px 10px rgba(#d8b541, 1);
-//   }
-//   100% {
-//     transform: rotate(-3deg);
-//     // box-shadow: inset 8px 20px rgba(#d8b541, 1);
-//   }
-// }
-
 .table {
-  overflow: hidden;
-  width: 100%;
-  background-color: $yellow;
-  box-shadow: inset 0 50px rgba(#d8b541, 1);
   position: relative;
   top: 0;
   z-index: 0;
+  width: 100%;
   padding: 120px 0;
+  background-color: $yellow;
+  box-shadow: inset 0 50px rgba(#d8b541, 1);
   .detail {
-    margin-top: 48px;
     display: flex;
     align-items: start;
+    margin-top: 48px;
     img {
       margin-right: 16px;
     }
@@ -396,74 +265,75 @@ h1 {
       display: flex;
       align-items: center;
       flex: 1;
-      font-size: 1.25rem;
-      font-weight: 700;
     }
   }
 }
 
 .question {
   padding: 150px 0 250px;
-  overflow: hidden;
+  pointer-events: none;
   h3 {
-    font-family: "Titan One", cursive;
-    font-size: 6rem;
-    color: $blue;
     position: absolute;
-    bottom: 10px;
+    bottom: 50px;
+    font-size: 4rem;
+    color: $blue;
     opacity: 0.5;
   }
   .card-list {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 120px 100px 0;
     position: relative;
+    margin: 120px 100px 0;
+    &::before {
+      content: "";
+      @include size(150px);
+      position: absolute;
+      right: -100px;
+      top: 100px;
+      z-index: -1;
+      background: linear-gradient(60deg, #64b3f4 0%, #c2e59c 100%);
+      border-radius: 50%;
+      opacity: 0.5;
+    }
     &::after {
       content: "";
-      width: 150px;
-      height: 150px;
+      @include size(300px);
       position: absolute;
-      background-image: linear-gradient(60deg, #64b3f4 0%, #c2e59c 100%);
-      left: -100px;
+      left: -200px;
       bottom: -50px;
-      border-radius: 50%;
       z-index: -1;
+      background: linear-gradient(60deg, #64b3f4 0%, #c2e59c 100%);
+      border-radius: 50%;
       opacity: 0.8;
     }
     .card-item {
-      width: 330px;
-      height: 450px;
-      background-color: rgba(#fff, 0.8);
-      border-radius: 20px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      padding: 100px 0;
       align-items: center;
+      @include size(330px, 450px);
+      padding: 100px 0;
+      background-color: rgba($white, 0.82);
+      border-radius: 20px;
       backdrop-filter: blur(3px);
-      border-top: #fff solid 1px;
-      border-left: #fff solid 1px;
+      border-top: $white solid 1px;
+      border-left: $white solid 1px;
     }
     p {
       font-size: 10rem;
-      font-weight: 700;
-      color: white;
     }
   }
 }
 
 .scroll {
-  overflow: hidden;
   display: flex;
-  line-height: normal;
   font-size: 6rem;
-  padding: 30px 0;
   font-weight: 900;
-  color: #f9d555;
-  background-color: #111;
+  color: $yellow;
+  background-color: $black;
   white-space: nowrap;
-  font-family: "Titan One", cursive;
+  overflow: hidden;
 }
 
 .scroll div {
@@ -471,7 +341,7 @@ h1 {
 }
 
 .scroll span {
-  color: #fff;
+  color: $white;
 }
 
 .scroll + .scroll {
@@ -504,9 +374,9 @@ h1 {
 }
 
 .zdog-canvas {
-  background-color: $blue;
   display: block;
   width: 100%;
+  background-color: $blue;
 }
 
 .happen {
@@ -514,10 +384,6 @@ h1 {
   padding-bottom: 300px;
   .detail {
     margin-top: 100px;
-  }
-  span {
-    display: block;
-    margin-top: 50px;
   }
 }
 
@@ -528,14 +394,3 @@ h1 {
     margin-top: 16px;
   }
 }
-
-footer {
-  background-color: #333;
-  padding: 24px 0;
-  p {
-    font-size: 0.8rem;
-  }
-}
-// * {
-//   outline: solid 1px;
-// }

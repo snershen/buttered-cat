@@ -296,21 +296,32 @@ h1 {
     border-radius: 40% 100px 10% 0%/100% 50% 30% 0%;
     box-shadow: inset -10px 0 rgba(#d8b541, 1);
   }
-  & > .cat-tail {
-    left: -350px;
-    top: 60px;
-  }
-  &-tail {
+  // & > .cat-tail {
+  //   left: -350px;
+  //   top: 60px;
+  // }
+  // &-tail {
+  //   position: absolute;
+  //   top: 0;
+  //   left: -10px;
+  //   width: 40px;
+  //   height: 30px;
+  //   border-radius: 80px 80px;
+  //   background-color: $yellow;
+  //   // transform: rotate(45deg);
+  //   animation: cat-tail 400ms infinite alternate ease-in-out;
+  //   transform-origin: bottom center;
+  // }
+  svg,
+  .cat-tail {
     position: absolute;
-    top: 0;
-    left: -10px;
-    width: 40px;
-    height: 30px;
-    border-radius: 80px 80px;
-    background-color: $yellow;
-    // transform: rotate(45deg);
-    animation: cat-tail 400ms infinite alternate ease-in-out;
-    transform-origin: bottom center;
+    left: -500px;
+    top: -250px;
+    transition: 0.2s;
+    animation: cat-tail 1s infinite alternate;
+    transform: scale(0.9);
+    // background-color: #111;
+    // left: 0;
   }
 }
 
@@ -349,15 +360,21 @@ h1 {
 // }
 
 @keyframes cat-tail {
-  0% {
-    transform: rotate(8deg);
-    // box-shadow: inset 8px 10px rgba(#d8b541, 1);
-  }
-  100% {
-    transform: rotate(-3deg);
-    // box-shadow: inset 8px 20px rgba(#d8b541, 1);
+  to {
+    d: path("M20,100 Q100,50 150,300 Q200,500 200,500");
   }
 }
+
+// @keyframes cat-tail {
+//   0% {
+//     transform: rotate(8deg);
+//     // box-shadow: inset 8px 10px rgba(#d8b541, 1);
+//   }
+//   100% {
+//     transform: rotate(-3deg);
+//     // box-shadow: inset 8px 20px rgba(#d8b541, 1);
+//   }
+// }
 
 .table {
   overflow: hidden;
@@ -386,7 +403,7 @@ h1 {
 }
 
 .question {
-  padding: 250px 0;
+  padding: 150px 0 250px;
   overflow: hidden;
   h3 {
     font-family: "Titan One", cursive;
@@ -394,6 +411,7 @@ h1 {
     color: $blue;
     position: absolute;
     bottom: 10px;
+    opacity: 0.5;
   }
   .card-list {
     display: flex;

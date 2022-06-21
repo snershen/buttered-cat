@@ -7,6 +7,21 @@ h1 {
   color: $blue;
 }
 
+@include pad {
+  h1 {
+    font-size: 4rem;
+  }
+}
+
+@include mobile {
+  h1 {
+    text-align: center;
+    font-size: 3rem;
+    line-height: 1;
+    padding-top: 20px;
+  }
+}
+
 .banner {
   @include size(100%, 90vh);
   background-color: $blue;
@@ -119,6 +134,53 @@ h1 {
   100% {
     box-shadow: 0px 700px 0 2px $yellow;
     height: 20px;
+  }
+}
+
+@include pad {
+  .butter {
+    border-radius: 0;
+    &-melt {
+      box-shadow: -72px -20px 0 5px $yellow, -34px 100px 0 4px $blue;
+      &:nth-child(2) {
+        box-shadow: 46px -20px 0 5px $yellow;
+      }
+      &:nth-child(3) {
+        box-shadow: -72px -20px 0 5px $yellow, 40px -30px $yellow,
+          -34px 140px 0 14px $blue;
+      }
+      &:nth-child(4) {
+        box-shadow: 50px -20px 0 5px $yellow, 22px 130px 0 4px $blue;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .butter {
+    @include size(100%, 150px);
+    border-radius: 0;
+    &-melt {
+      box-shadow: -72px -20px 0 5px $yellow, -34px 110px 0 4px $blue;
+      &:nth-child(2) {
+        width: 20px;
+        left: 28%;
+        bottom: -60px;
+        box-shadow: none;
+      }
+      &:nth-child(3) {
+        width: 20px;
+        left: 55%;
+        bottom: -60px;
+        box-shadow: 40px -30px $yellow;
+      }
+      &:nth-child(4) {
+        width: 20px;
+        left: 88%;
+        bottom: -60px;
+        box-shadow: 50px -20px 0 5px $yellow, 22px 130px 0 4px $blue;
+      }
+    }
   }
 }
 
@@ -246,6 +308,21 @@ h1 {
   }
 }
 
+@include pad {
+  .cat {
+    left: 50%;
+    transform: scale(0.8);
+  }
+}
+
+@include mobile {
+  .cat {
+    left: 20%;
+    transform: scale(0.45);
+    bottom: -10px;
+  }
+}
+
 .table {
   position: relative;
   top: 0;
@@ -266,6 +343,18 @@ h1 {
       display: flex;
       align-items: center;
       flex: 1;
+    }
+  }
+}
+
+@include mobile {
+  .table {
+    .detail {
+      flex-direction: column;
+      gap: 24px;
+      p {
+        width: 100%;
+      }
     }
   }
 }
@@ -328,10 +417,64 @@ h1 {
   }
 }
 
+@include pad {
+  .question {
+    .card-list {
+      margin: 120px 16px;
+      flex-direction: column;
+      &::before {
+        right: 0;
+        top: -100px;
+      }
+      &::after {
+        content: "";
+        @include size(300px);
+        position: absolute;
+        left: 0px;
+        bottom: -200px;
+        z-index: -1;
+        background: linear-gradient(60deg, #64b3f4 0%, #c2e59c 100%);
+        border-radius: 50%;
+        opacity: 0.8;
+      }
+      .card-item {
+        @include size(300px, 420px);
+      }
+    }
+  }
+}
+
+@include mobile {
+  .question {
+    .card-list {
+      margin: 120px 16px;
+      flex-direction: column;
+      &::before {
+        right: 0;
+        top: -100px;
+      }
+      &::after {
+        content: "";
+        @include size(200px);
+        position: absolute;
+        left: 0px;
+        bottom: -100px;
+        z-index: -1;
+        background: linear-gradient(60deg, #64b3f4 0%, #c2e59c 100%);
+        border-radius: 50%;
+        opacity: 0.8;
+      }
+      .card-item {
+        @include size(300px, 420px);
+      }
+    }
+  }
+}
+
 .what {
   // background-color: $black;
   overflow: hidden;
-  padding: 200px 300px;
+  padding: 200px 0;
   clip-path: polygon(
     24.7% 34%,
     70.2% 25.8%,
@@ -341,7 +484,6 @@ h1 {
     37.2% 68.8%,
     29.8% 70.5%
   );
-
   background-color: $yellow;
   transition: 1s;
   p {
@@ -370,6 +512,42 @@ h1 {
 .whatText-differ {
   transform: rotate(20deg) !important;
   text-shadow: 8px 8px 0 orange;
+}
+
+@include pad {
+  .what {
+    clip-path: polygon(
+      0% 0%,
+      100% 0%,
+      100% 100%,
+      67.9% 100%,
+      40.8% 100%,
+      18.8% 100%,
+      0% 100%
+    );
+    p {
+      font-size: 5em;
+    }
+  }
+}
+
+@include mobile {
+  .what {
+    padding: 100px 0;
+    overflow: hidden;
+    clip-path: polygon(
+      0% 0%,
+      100% 0%,
+      100% 100%,
+      67.9% 100%,
+      40.8% 100%,
+      18.8% 100%,
+      0% 100%
+    );
+    p {
+      font-size: 3rem;
+    }
+  }
 }
 // .scroll {
 //   display: flex;
@@ -424,6 +602,18 @@ h1 {
   background-color: $blue;
 }
 
+@include pad {
+  .zdog-canvas {
+    height: 800px;
+  }
+}
+
+@include pad {
+  .zdog-canvas {
+    height: 600px;
+  }
+}
+
 .happen {
   background-color: $blue;
   padding-top: 100px;
@@ -440,26 +630,18 @@ h1 {
     padding: 100px 0 150px;
     position: relative;
     z-index: 1;
-    &::after {
-      content: "";
-      width: 100%;
-      height: 700px;
-      z-index: -1;
-      top: 0;
-      left: 0;
-      position: absolute;
-      background: url(/img/cat_paw.png) no-repeat;
-      background-size: contain;
-      background-position: right -200px;
-      animation: paw-move 1.5s infinite alternate ease-in;
-    }
+    background: url(/img/cat_paw.png), url(/img/cicle.png);
+    background-repeat: no-repeat;
+    background-position: right -200px;
+    background-size: 50%;
+    animation: paw-move 1s infinite alternate, none;
     &::before {
       content: "";
       width: 400px;
       height: 400px;
-      position: absolute;
+      position: relative;
       background-color: #fff;
-      z-index: -1;
+      z-index: 10;
       background-color: lighten($yellow, 20%);
       border-radius: 50%;
       right: 150px;
@@ -478,7 +660,7 @@ h1 {
   &-text {
     position: absolute;
     font-size: 1.1rem;
-    color: #555;
+    color: $blue;
     right: 50px;
     bottom: 80px;
     transform: rotate(-10deg);
@@ -488,7 +670,7 @@ h1 {
 
 @keyframes paw-move {
   to {
-    background-position: 90% -220px;
+    background-position: 90% -220px, right -200px;
   }
 }
 
@@ -501,6 +683,52 @@ h1 {
   }
   100% {
     transform: translateX(-20px) translateY(0) rotate(-30deg);
+  }
+}
+
+@include pad {
+  .result {
+    .container {
+      padding: 100px 16px 150px;
+    }
+    h2 {
+      margin-top: 200px;
+    }
+    h2,
+    h2 + p {
+      width: 100%;
+    }
+  }
+}
+
+@include mobile {
+  .result {
+    background-color: $yellow;
+    // outline: 1px solid $blue;
+    .container {
+      background-position: right -100px;
+      background-size: 80%;
+      animation: paw-move 1s infinite alternate, none;
+    }
+    .title {
+      margin-bottom: 20px;
+    }
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+    img + img {
+      width: 50%;
+    }
+    &-text {
+      right: 10px;
+      font-size: 0.85rem;
+    }
+  }
+  @keyframes paw-move {
+    to {
+      background-position: 80% -120px, right -100px;
+    }
   }
 }
 

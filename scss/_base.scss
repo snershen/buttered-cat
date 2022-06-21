@@ -6,6 +6,11 @@
   cursor: crosshair;
 }
 
+body,
+html {
+  overflow-x: hidden;
+}
+
 body {
   background-color: $blue;
   line-height: 1.5;
@@ -16,4 +21,10 @@ body {
 p {
   // pointer-events: none;
   font-size: 1.3rem;
+}
+
+@include pad {
+  p {
+    font-size: 1rem;
+  }
 }

@@ -11,6 +11,10 @@
 footer {
   background-color: $black;
   padding: 24px 0;
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
   p {
     font-size: 0.8rem;
   }

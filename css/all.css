@@ -167,6 +167,15 @@ footer {
   padding: 24px 0;
 }
 
+footer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 footer p {
   font-size: 0.8rem;
 }
@@ -1795,9 +1804,10 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
   margin-top: 48px;
 }
 
@@ -1900,17 +1910,18 @@ h1 {
 }
 
 .what {
+  overflow: hidden;
   padding: 200px 300px;
-  -webkit-clip-path: circle(300px at 50% 50%);
-          clip-path: circle(300px at 50% 50%);
+  -webkit-clip-path: polygon(24.7% 34%, 70.2% 25.8%, 75% 62.8%, 43.8% 68%, 37.4% 78.8%, 37.2% 68.8%, 29.8% 70.5%);
+          clip-path: polygon(24.7% 34%, 70.2% 25.8%, 75% 62.8%, 43.8% 68%, 37.4% 78.8%, 37.2% 68.8%, 29.8% 70.5%);
   background-color: #f9d555;
   -webkit-transition: 1s;
   transition: 1s;
 }
 
 .what p {
-  -webkit-transform: rotate(30deg);
-          transform: rotate(30deg);
+  -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg);
   margin-left: 100px;
   font-size: 8rem;
   line-height: 1;
@@ -1922,13 +1933,13 @@ h1 {
 }
 
 .what-differ {
-  -webkit-clip-path: circle(2000px at 50% 50%);
-          clip-path: circle(2000px at 50% 50%);
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 67.9% 100%, 40.8% 100%, 18.8% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 67.9% 100%, 40.8% 100%, 18.8% 100%, 0% 100%);
 }
 
 .whatText-differ {
-  -webkit-transform: rotate(-10deg) !important;
-          transform: rotate(-10deg) !important;
+  -webkit-transform: rotate(20deg) !important;
+          transform: rotate(20deg) !important;
   text-shadow: 8px 8px 0 orange;
 }
 
@@ -1939,6 +1950,7 @@ h1 {
 }
 
 .happen {
+  background-color: #004c77;
   padding-top: 100px;
   padding-bottom: 300px;
 }
@@ -1949,10 +1961,105 @@ h1 {
 
 .result {
   background-color: #f9d555;
-  padding: 100px 0;
+}
+
+.result .container {
+  padding: 100px 0 150px;
+  position: relative;
+  z-index: 1;
+}
+
+.result .container::after {
+  content: "";
+  width: 100%;
+  height: 700px;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: url(/img/cat_paw.png) no-repeat;
+  background-size: contain;
+  background-position: right -200px;
+  -webkit-animation: paw-move 1.5s infinite alternate ease-in;
+          animation: paw-move 1.5s infinite alternate ease-in;
+}
+
+.result .container::before {
+  content: "";
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  background-color: #fff;
+  z-index: -1;
+  background-color: #fcedb8;
+  border-radius: 50%;
+  right: 150px;
+}
+
+.result .title {
+  margin-bottom: 100px;
+}
+
+.result h2,
+.result h2 + p {
+  width: 40%;
 }
 
 .result p + p {
   margin-top: 16px;
+}
+
+.result-text {
+  position: absolute;
+  font-size: 1.1rem;
+  color: #555;
+  right: 50px;
+  bottom: 80px;
+  -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+  -webkit-animation: shock-ani 1s infinite alternate ease-in;
+          animation: shock-ani 1s infinite alternate ease-in;
+}
+
+@-webkit-keyframes paw-move {
+  to {
+    background-position: 90% -220px;
+  }
+}
+
+@keyframes paw-move {
+  to {
+    background-position: 90% -220px;
+  }
+}
+
+@-webkit-keyframes shock-ani {
+  20% {
+    -webkit-transform: translateX(0px) translateY(0) rotate(-10deg);
+            transform: translateX(0px) translateY(0) rotate(-10deg);
+  }
+  70% {
+    -webkit-transform: translateX(-20px) translateY(0) rotate(-30deg);
+            transform: translateX(-20px) translateY(0) rotate(-30deg);
+  }
+  100% {
+    -webkit-transform: translateX(-20px) translateY(0) rotate(-30deg);
+            transform: translateX(-20px) translateY(0) rotate(-30deg);
+  }
+}
+
+@keyframes shock-ani {
+  20% {
+    -webkit-transform: translateX(0px) translateY(0) rotate(-10deg);
+            transform: translateX(0px) translateY(0) rotate(-10deg);
+  }
+  70% {
+    -webkit-transform: translateX(-20px) translateY(0) rotate(-30deg);
+            transform: translateX(-20px) translateY(0) rotate(-30deg);
+  }
+  100% {
+    -webkit-transform: translateX(-20px) translateY(0) rotate(-30deg);
+            transform: translateX(-20px) translateY(0) rotate(-30deg);
+  }
 }
 /*# sourceMappingURL=all.css.map */

@@ -1476,13 +1476,7 @@ h1 {
   width: 100%;
   height: 90vh;
   background-color: #004c77;
-}
-
-@media screen and (max-width: 1025px) {
-  .banner {
-    width: 100%;
-    height: 600px;
-  }
+  position: relative;
 }
 
 @media screen and (max-width: 992px) {
@@ -1748,7 +1742,7 @@ h1 {
 .cat {
   position: absolute;
   left: 65%;
-  bottom: 50px;
+  bottom: 0px;
   -webkit-transform: translateX(-50%) scale(1.2);
           transform: translateX(-50%) scale(1.2);
   -webkit-animation: cat-move 1s infinite alternate;
@@ -1870,13 +1864,13 @@ h1 {
 
 @-webkit-keyframes cat-move {
   to {
-    margin-bottom: 3px;
+    margin-bottom: -3px;
   }
 }
 
 @keyframes cat-move {
   to {
-    margin-bottom: 3px;
+    margin-bottom: -3px;
   }
 }
 
@@ -1930,29 +1924,30 @@ h1 {
   }
 }
 
+@media screen and (max-width: 1440px) {
+  .cat {
+    left: 50%;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    bottom: -30px;
+  }
+}
+
 @media screen and (max-width: 992px) {
   .cat {
     left: 50%;
     -webkit-transform: scale(0.8);
             transform: scale(0.8);
+    bottom: -30px;
   }
 }
 
 @media screen and (max-width: 576px) {
   .cat {
     left: 20%;
-    -webkit-transform: scale(0.45);
-            transform: scale(0.45);
-    bottom: 150px;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .cat {
-    left: 20%;
-    -webkit-transform: scale(0.45);
-            transform: scale(0.45);
-    bottom: 80px;
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    bottom: calc(-30px * 3);
   }
 }
 
@@ -2094,7 +2089,7 @@ h1 {
     padding: 100px 0;
   }
   .question .card-list {
-    margin: 0px 16px;
+    margin: 100px 16px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -2261,8 +2256,8 @@ h1 {
     padding-bottom: 150px;
   }
   .happen .detail {
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-top: 100px;
+    margin-bottom: 60px;
   }
 }
 

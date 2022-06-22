@@ -129,162 +129,6 @@ table {
   border-spacing: 0;
 }
 
-*,
-*::before,
-*::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  cursor: crosshair;
-}
-
-body,
-html {
-  overflow-x: hidden;
-}
-
-body {
-  background-color: #004c77;
-  line-height: 1.5;
-  color: #222;
-  font-family: "Noto Sans TC", sans-serif;
-}
-
-p {
-  font-size: 1.3rem;
-}
-
-@media screen and (max-width: 992px) {
-  p {
-    font-size: 1rem;
-  }
-}
-
-.container {
-  max-width: 1140px;
-  margin: 0 auto;
-  padding: 0 16px;
-}
-
-.container-s {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 16px;
-}
-
-footer {
-  background-color: #222;
-  padding: 24px 0;
-}
-
-footer .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-footer p {
-  font-size: 0.8rem;
-}
-
-@media screen and (max-width: 576px) {
-  .container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  p + p {
-    margin-top: 20px;
-  }
-}
-
-.font-eng {
-  font-family: "Titan One", cursive;
-}
-
-.title-1 {
-  font-size: 3rem;
-}
-
-.title-2 {
-  font-size: 2.5rem;
-}
-
-.title-3 {
-  font-size: 2rem;
-}
-
-@media screen and (max-width: 992px) {
-  .title-1 {
-    font-size: 2.5rem;
-  }
-  .title-2 {
-    font-size: 2rem;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .title-1 {
-    font-size: 2rem;
-  }
-  .title-2 {
-    font-size: 1.5rem;
-  }
-}
-
-.text-light {
-  font-weight: 300;
-}
-
-.text-bold {
-  font-weight: 700;
-}
-
-.text-heavy {
-  font-weight: 900;
-}
-
-.text-blue {
-  color: #004c77;
-}
-
-.text-white {
-  color: #fafafa;
-}
-
-.text-yellow {
-  color: #f9d555;
-}
-
-.text-c {
-  text-align: center;
-}
-
-.mb-1 {
-  margin-bottom: 8px;
-}
-
-.mb-2 {
-  margin-bottom: 16px;
-}
-
-.mb-4 {
-  margin-bottom: 32px;
-}
-
 [data-aos][data-aos][data-aos-duration="50"],
 body[data-aos-duration="50"] [data-aos] {
   -webkit-transition-duration: 50ms;
@@ -1447,6 +1291,162 @@ body[data-aos-easing="ease-in-out-back"] [data-aos] {
           transform: translate3d(100px, 0, 0);
 }
 
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: crosshair;
+}
+
+body,
+html {
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #004c77;
+  line-height: 1.5;
+  color: #222;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+p {
+  font-size: 1.3rem;
+}
+
+@media screen and (max-width: 992px) {
+  p {
+    font-size: 1rem;
+  }
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.container-s {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+footer {
+  background-color: #222;
+  padding: 24px 0;
+}
+
+footer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer p {
+  font-size: 0.8rem;
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  p + p {
+    margin-top: 20px;
+  }
+}
+
+.font-eng {
+  font-family: "Titan One", cursive;
+}
+
+.title-1 {
+  font-size: 3rem;
+}
+
+.title-2 {
+  font-size: 2.5rem;
+}
+
+.title-3 {
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 992px) {
+  .title-1 {
+    font-size: 2.5rem;
+  }
+  .title-2 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .title-1 {
+    font-size: 2rem;
+  }
+  .title-2 {
+    font-size: 1.5rem;
+  }
+}
+
+.text-light {
+  font-weight: 300;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.text-heavy {
+  font-weight: 900;
+}
+
+.text-blue {
+  color: #004c77;
+}
+
+.text-white {
+  color: #fafafa;
+}
+
+.text-yellow {
+  color: #f9d555;
+}
+
+.text-c {
+  text-align: center;
+}
+
+.mb-1 {
+  margin-bottom: 8px;
+}
+
+.mb-2 {
+  margin-bottom: 16px;
+}
+
+.mb-4 {
+  margin-bottom: 32px;
+}
+
 h1 {
   position: relative;
   z-index: 10;
@@ -1478,10 +1478,10 @@ h1 {
 }
 
 .banner {
+  position: relative;
   width: 100%;
   height: 90vh;
   background-color: #004c77;
-  position: relative;
 }
 
 @media screen and (max-width: 992px) {
@@ -2160,13 +2160,13 @@ h1 {
 }
 
 .what {
-  overflow: hidden;
   padding: 230px 0;
   -webkit-clip-path: circle(20%);
           clip-path: circle(20%);
   background-color: #f9d555;
   -webkit-transition: 2s;
   transition: 2s;
+  overflow: hidden;
 }
 
 .what p {
@@ -2219,20 +2219,6 @@ h1 {
   }
 }
 
-.zdog-canvas {
-  display: block;
-  width: 100%;
-  background-color: #004c77;
-  margin: 30px 0;
-}
-
-@media screen and (max-width: 992px) {
-  .zdog-canvas {
-    margin-top: 100px;
-    height: 600px;
-  }
-}
-
 .happen {
   background-color: #004c77;
   padding-top: 100px;
@@ -2252,6 +2238,20 @@ h1 {
   .happen .detail {
     margin-top: 100px;
     margin-bottom: 60px;
+  }
+}
+
+.zdog-canvas {
+  display: block;
+  width: 100%;
+  background-color: #004c77;
+  margin: 30px 0;
+}
+
+@media screen and (max-width: 992px) {
+  .zdog-canvas {
+    margin-top: 100px;
+    height: 600px;
   }
 }
 
@@ -2315,20 +2315,6 @@ h1 {
 @keyframes paw-move {
   to {
     background-position: 90% -220px, right -200px;
-  }
-}
-
-@-webkit-keyframes shock-ani {
-  to {
-    -webkit-transform: translateX(0px) translateY(0) rotate(-10deg);
-            transform: translateX(0px) translateY(0) rotate(-10deg);
-  }
-}
-
-@keyframes shock-ani {
-  to {
-    -webkit-transform: translateX(0px) translateY(0) rotate(-10deg);
-            transform: translateX(0px) translateY(0) rotate(-10deg);
   }
 }
 

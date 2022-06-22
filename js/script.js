@@ -41,8 +41,6 @@ let cat = new Zdog.Anchor({
 let catBody = new Zdog.Shape({
   addTo: cat,
   path: [{ x: -50 }, { x: 50 }],
-  // position right above hips
-  // ( hips.stroke + chest.stroke ) / 2
   translate: { y: -40, z: -100 },
   rotate: { y: Zdog.TAU / 4 },
   stroke: 120,
@@ -116,7 +114,6 @@ let catNose = new Zdog.Polygon({
   radius: 8,
   fill: true,
   sides: 3,
-  // stroke: 10,
   color: blue,
   translate: { x: 0, y: 30 },
   rotate: { z: Zdog.TAU / 2 },
@@ -180,14 +177,6 @@ catFeet.copyGraph({
 catFeet.copyGraph({
   translate: { x: -60, y: 60, z: -30 },
 });
-
-// let catFaceShadow=new Zdog.Shape({
-//   addTo:catFace,
-//   path:[{x:10},{x:-10}],
-
-//   color:'black',
-//   translate:{x:10},
-// })
 
 let catTail = new Zdog.Ellipse({
   addTo: catBody,
@@ -398,51 +387,13 @@ let circleAnchor = new Zdog.Anchor({
   addTo: illo,
 });
 
-// let circle=new Zdog.Ellipse({
-//   addTo:illo,
-//   diameter:600,
-//   stroke:20,
-//   translate:{z:-500},
-//   rotate:{y:20},
-//   color:'#EA0',
-// })
-
-// let circle2=circle.copy({
-//   translate:{z:-500},
-//   diameter:800,
-//   stroke:10,
-//   color:'#EA0',
-// })
-
-// let ground=new Zdog.Cylinder({
-//   addTo: illo,
-//   diameter: 300,
-//   length: 10,
-//   stroke: false,
-//   color: '#C25',
-//   backface: '#E62',
-//   translate:{z:-100,y:200},
-//   rotate:{x:Zdog.TAU/4},
-// });
-
-// let catBodyShadow = new Zdog.Hemisphere({
-// 	addTo: catBody,
-// 	fill: true,
-// 	diameter: 130,
-//   translate:{z:20},
-// 	rotate: {x: 130},
-// 	color: '#dbb741',
-// 	backface: false,
-// })
-
 function animate() {
   cat.rotate.z += 0.04;
   electAnchor.rotate.z += 0.02;
   electAnchor2.rotate.z += 0.008;
   electAnchor3.rotate.z += 0.01;
-  // circle.rotate.y+=0.03;
-  // circle2.rotate.x+=0.03;
   illo.updateRenderGraph();
   requestAnimationFrame(animate);
 }
+
 animate();

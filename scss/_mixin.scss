@@ -3,7 +3,7 @@
   height: $h;
 }
 
-//RWD
+//mixin RWD
 @mixin pad {
   @media screen and (max-width: 992px) {
     @content;

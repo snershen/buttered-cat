@@ -2161,7 +2161,7 @@ h1 {
 
 .what {
   overflow: hidden;
-  padding: 300px 0;
+  padding: 230px 0;
   -webkit-clip-path: circle(20%);
           clip-path: circle(20%);
   background-color: #f9d555;
@@ -2173,7 +2173,7 @@ h1 {
   text-align: center;
   -webkit-transform: rotate(-10deg);
           transform: rotate(-10deg);
-  font-size: 10rem;
+  font-size: 8rem;
   line-height: 1;
   font-family: "Titan One", cursive;
   -webkit-transition: 0.5s;
@@ -2222,7 +2222,6 @@ h1 {
 .zdog-canvas {
   display: block;
   width: 100%;
-  height: 100%;
   background-color: #004c77;
   margin: 30px 0;
 }

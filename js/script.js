@@ -2,7 +2,7 @@ let what = document.querySelector(".what");
 let whatText = document.querySelector(".what p");
 
 function whatmove() {
-  if (window.pageYOffset > what.offsetTop - 800) {
+  if (window.pageYOffset > what.offsetTop - 700) {
     what.classList.add("what-differ");
     whatText.classList.add("whatText-differ");
   } else {

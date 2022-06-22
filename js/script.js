@@ -13,12 +13,17 @@ AOS.init();
 const blue = "#004C77";
 const yellow = "#F9D555";
 const darkYellow = "edc649";
+let displaySize;
+let sceneSize = 300;
 
 const illo = new Zdog.Illustration({
   element: ".zdog-canvas",
   resize: true,
   dragRotate: true,
-  zoom: 1.5,
+  onResize: function (width, height) {
+    displaySize = Math.min(width, height / 2);
+    this.zoom = Math.floor(displaySize / sceneSize);
+  },
 });
 
 let cat = new Zdog.Anchor({

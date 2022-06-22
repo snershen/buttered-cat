@@ -18,13 +18,32 @@ h1 {
     text-align: center;
     font-size: 3rem;
     line-height: 1;
-    padding-top: 20px;
+    padding: 50px 0;
+    white-space: nowrap;
   }
 }
 
 .banner {
   @include size(100%, 90vh);
   background-color: $blue;
+}
+
+@media screen and (max-width: 1025px) {
+  .banner {
+    @include size(100%, 600px);
+  }
+}
+
+@include pad {
+  .banner {
+    @include size(100%, 700px);
+  }
+}
+
+@include mobile {
+  .banner {
+    @include size(100%, 500px);
+  }
 }
 
 .butter {
@@ -319,7 +338,15 @@ h1 {
   .cat {
     left: 20%;
     transform: scale(0.45);
-    bottom: -10px;
+    bottom: 150px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .cat {
+    left: 20%;
+    transform: scale(0.45);
+    bottom: 80px;
   }
 }
 
@@ -419,8 +446,9 @@ h1 {
 
 @include pad {
   .question {
+    padding: 100px 0;
     .card-list {
-      margin: 120px 16px;
+      margin: 0px 16px;
       flex-direction: column;
       &::before {
         right: 0;
@@ -465,7 +493,14 @@ h1 {
         opacity: 0.8;
       }
       .card-item {
-        @include size(300px, 420px);
+        @include size(250px, 350px);
+        padding-top: 80px;
+      }
+      img {
+        width: 60%;
+      }
+      p {
+        font-size: 5rem;
       }
     }
   }
@@ -526,6 +561,7 @@ h1 {
       0% 100%
     );
     p {
+      transform: rotate(-5deg);
       font-size: 5em;
     }
   }
@@ -533,6 +569,7 @@ h1 {
 
 @include mobile {
   .what {
+    margin: 0;
     padding: 100px 0;
     overflow: hidden;
     clip-path: polygon(
@@ -544,8 +581,14 @@ h1 {
       18.8% 100%,
       0% 100%
     );
+    .container {
+      padding: 0;
+    }
     p {
-      font-size: 3rem;
+      width: 100px;
+      margin: 0;
+      font-size: 3.5rem;
+      // white-space: nowrap;
     }
   }
 }
@@ -599,7 +642,9 @@ h1 {
 .zdog-canvas {
   display: block;
   width: 100%;
+  height: 100%;
   background-color: $blue;
+  margin: 60px 0;
 }
 
 @include pad {
@@ -610,6 +655,7 @@ h1 {
 
 @include pad {
   .zdog-canvas {
+    margin-top: 100px;
     height: 600px;
   }
 }
@@ -620,6 +666,18 @@ h1 {
   padding-bottom: 300px;
   .detail {
     margin-top: 100px;
+  }
+}
+
+@include pad {
+  .happen {
+    background-color: $blue;
+    padding-top: 100px;
+    padding-bottom: 150px;
+    .detail {
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
   }
 }
 
@@ -727,7 +785,7 @@ h1 {
   }
   @keyframes paw-move {
     to {
-      background-position: 80% -120px, right -100px;
+      background-position: right -100px;
     }
   }
 }

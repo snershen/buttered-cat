@@ -208,7 +208,6 @@ footer p {
   }
   p + p {
     margin-top: 20px;
-    font-size: 0.7rem;
   }
 }
 
@@ -1468,7 +1467,8 @@ h1 {
     text-align: center;
     font-size: 3rem;
     line-height: 1;
-    padding-top: 20px;
+    padding: 50px 0;
+    white-space: nowrap;
   }
 }
 
@@ -1476,6 +1476,27 @@ h1 {
   width: 100%;
   height: 90vh;
   background-color: #004c77;
+}
+
+@media screen and (max-width: 1025px) {
+  .banner {
+    width: 100%;
+    height: 600px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .banner {
+    width: 100%;
+    height: 700px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .banner {
+    width: 100%;
+    height: 500px;
+  }
 }
 
 .butter {
@@ -1922,7 +1943,16 @@ h1 {
     left: 20%;
     -webkit-transform: scale(0.45);
             transform: scale(0.45);
-    bottom: -10px;
+    bottom: 150px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .cat {
+    left: 20%;
+    -webkit-transform: scale(0.45);
+            transform: scale(0.45);
+    bottom: 80px;
   }
 }
 
@@ -2060,8 +2090,11 @@ h1 {
 }
 
 @media screen and (max-width: 992px) {
+  .question {
+    padding: 100px 0;
+  }
   .question .card-list {
-    margin: 120px 16px;
+    margin: 0px 16px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -2114,8 +2147,15 @@ h1 {
     opacity: 0.8;
   }
   .question .card-list .card-item {
-    width: 300px;
-    height: 420px;
+    width: 250px;
+    height: 350px;
+    padding-top: 80px;
+  }
+  .question .card-list img {
+    width: 60%;
+  }
+  .question .card-list p {
+    font-size: 5rem;
   }
 }
 
@@ -2159,26 +2199,36 @@ h1 {
             clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 67.9% 100%, 40.8% 100%, 18.8% 100%, 0% 100%);
   }
   .what p {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
     font-size: 5em;
   }
 }
 
 @media screen and (max-width: 576px) {
   .what {
+    margin: 0;
     padding: 100px 0;
     overflow: hidden;
     -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 67.9% 100%, 40.8% 100%, 18.8% 100%, 0% 100%);
             clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 67.9% 100%, 40.8% 100%, 18.8% 100%, 0% 100%);
   }
+  .what .container {
+    padding: 0;
+  }
   .what p {
-    font-size: 3rem;
+    width: 100px;
+    margin: 0;
+    font-size: 3.5rem;
   }
 }
 
 .zdog-canvas {
   display: block;
   width: 100%;
+  height: 100%;
   background-color: #004c77;
+  margin: 60px 0;
 }
 
 @media screen and (max-width: 992px) {
@@ -2189,6 +2239,7 @@ h1 {
 
 @media screen and (max-width: 992px) {
   .zdog-canvas {
+    margin-top: 100px;
     height: 600px;
   }
 }
@@ -2201,6 +2252,18 @@ h1 {
 
 .happen .detail {
   margin-top: 100px;
+}
+
+@media screen and (max-width: 992px) {
+  .happen {
+    background-color: #004c77;
+    padding-top: 100px;
+    padding-bottom: 150px;
+  }
+  .happen .detail {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
 }
 
 .result {
@@ -2337,12 +2400,12 @@ h1 {
   }
   @-webkit-keyframes paw-move {
     to {
-      background-position: 80% -120px, right -100px;
+      background-position: right -100px;
     }
   }
   @keyframes paw-move {
     to {
-      background-position: 80% -120px, right -100px;
+      background-position: right -100px;
     }
   }
 }

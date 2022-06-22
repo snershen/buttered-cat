@@ -2161,19 +2161,19 @@ h1 {
 
 .what {
   overflow: hidden;
-  padding: 200px 0;
-  -webkit-clip-path: polygon(24.7% 34%, 70.2% 25.8%, 75% 62.8%, 43.8% 68%, 37.4% 78.8%, 37.2% 68.8%, 29.8% 70.5%);
-          clip-path: polygon(24.7% 34%, 70.2% 25.8%, 75% 62.8%, 43.8% 68%, 37.4% 78.8%, 37.2% 68.8%, 29.8% 70.5%);
+  padding: 300px 0;
+  -webkit-clip-path: circle(20%);
+          clip-path: circle(20%);
   background-color: #f9d555;
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: 2s;
+  transition: 2s;
 }
 
 .what p {
+  text-align: center;
   -webkit-transform: rotate(-10deg);
           transform: rotate(-10deg);
-  margin-left: 100px;
-  font-size: 8rem;
+  font-size: 10rem;
   line-height: 1;
   font-family: "Titan One", cursive;
   -webkit-transition: 0.5s;
@@ -2183,17 +2183,20 @@ h1 {
 }
 
 .what-differ {
-  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 67.9% 100%, 40.8% 100%, 18.8% 100%, 0% 100%);
-          clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 67.9% 100%, 40.8% 100%, 18.8% 100%, 0% 100%);
+  -webkit-clip-path: circle(100%);
+          clip-path: circle(100%);
 }
 
 .whatText-differ {
-  -webkit-transform: rotate(20deg) !important;
-          transform: rotate(20deg) !important;
+  -webkit-transform: rotate(0deg) !important;
+          transform: rotate(0deg) !important;
   text-shadow: 8px 8px 0 orange;
 }
 
 @media screen and (max-width: 992px) {
+  .what {
+    padding: 150px 0;
+  }
   .what p {
     -webkit-transform: rotate(-5deg);
             transform: rotate(-5deg);
@@ -2211,8 +2214,7 @@ h1 {
     padding: 0;
   }
   .what p {
-    width: 100px;
-    margin: 0;
+    margin: 0 auto;
     font-size: 3.5rem;
   }
 }
@@ -2222,13 +2224,7 @@ h1 {
   width: 100%;
   height: 100%;
   background-color: #004c77;
-  margin: 60px 0;
-}
-
-@media screen and (max-width: 992px) {
-  .zdog-canvas {
-    height: 800px;
-  }
+  margin: 30px 0;
 }
 
 @media screen and (max-width: 992px) {
@@ -2307,10 +2303,8 @@ h1 {
   color: #004c77;
   right: 50px;
   bottom: 80px;
-  -webkit-transform: rotate(-10deg);
-          transform: rotate(-10deg);
-  -webkit-animation: shock-ani 1s infinite alternate ease-in;
-          animation: shock-ani 1s infinite alternate ease-in;
+  -webkit-transform: rotate(-20deg);
+          transform: rotate(-20deg);
 }
 
 @-webkit-keyframes paw-move {
@@ -2326,32 +2320,16 @@ h1 {
 }
 
 @-webkit-keyframes shock-ani {
-  20% {
+  to {
     -webkit-transform: translateX(0px) translateY(0) rotate(-10deg);
             transform: translateX(0px) translateY(0) rotate(-10deg);
-  }
-  70% {
-    -webkit-transform: translateX(-20px) translateY(0) rotate(-30deg);
-            transform: translateX(-20px) translateY(0) rotate(-30deg);
-  }
-  100% {
-    -webkit-transform: translateX(-20px) translateY(0) rotate(-30deg);
-            transform: translateX(-20px) translateY(0) rotate(-30deg);
   }
 }
 
 @keyframes shock-ani {
-  20% {
+  to {
     -webkit-transform: translateX(0px) translateY(0) rotate(-10deg);
             transform: translateX(0px) translateY(0) rotate(-10deg);
-  }
-  70% {
-    -webkit-transform: translateX(-20px) translateY(0) rotate(-30deg);
-            transform: translateX(-20px) translateY(0) rotate(-30deg);
-  }
-  100% {
-    -webkit-transform: translateX(-20px) translateY(0) rotate(-30deg);
-            transform: translateX(-20px) translateY(0) rotate(-30deg);
   }
 }
 

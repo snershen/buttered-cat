@@ -513,7 +513,7 @@ h1 {
 //what section
 .what {
   padding: 230px 0;
-  clip-path: circle(20%);
+  clip-path: circle(15%);
   background-color: $yellow;
   transition: 2s;
   overflow: hidden;
@@ -607,7 +607,7 @@ h1 {
     padding: 100px 0 150px;
     position: relative;
     z-index: 1;
-    background: url(/img/cat_paw.png), url(/img/cicle.png);
+    background: url(../img/cat_paw.png), url(../img/cicle.png);
     background-repeat: no-repeat;
     background-position: right -200px;
     background-size: 50%;

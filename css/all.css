@@ -1300,7 +1300,6 @@ body[data-aos-easing="ease-in-out-back"] [data-aos] {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  cursor: crosshair;
 }
 
 body,
@@ -2161,8 +2160,8 @@ h1 {
 
 .what {
   padding: 230px 0;
-  -webkit-clip-path: circle(20%);
-          clip-path: circle(20%);
+  -webkit-clip-path: circle(15%);
+          clip-path: circle(15%);
   background-color: #f9d555;
   -webkit-transition: 2s;
   transition: 2s;
@@ -2263,7 +2262,7 @@ h1 {
   padding: 100px 0 150px;
   position: relative;
   z-index: 1;
-  background: url(/img/cat_paw.png), url(/img/cicle.png);
+  background: url(../img/cat_paw.png), url(../img/cicle.png);
   background-repeat: no-repeat;
   background-position: right -200px;
   background-size: 50%;

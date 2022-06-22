@@ -19,7 +19,12 @@ h1 {
     font-size: 3rem;
     line-height: 1;
     padding: 50px 0;
-    white-space: nowrap;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  h1 {
+    padding: 30px 0;
   }
 }
 
@@ -555,15 +560,15 @@ h1 {
 
 @include pad {
   .what {
-    clip-path: polygon(
-      0% 0%,
-      100% 0%,
-      100% 100%,
-      67.9% 100%,
-      40.8% 100%,
-      18.8% 100%,
-      0% 100%
-    );
+    // clip-path: polygon(
+    //   0% 0%,
+    //   100% 0%,
+    //   100% 100%,
+    //   67.9% 100%,
+    //   40.8% 100%,
+    //   18.8% 100%,
+    //   0% 100%
+    // );
     p {
       transform: rotate(-5deg);
       font-size: 5em;
@@ -576,15 +581,15 @@ h1 {
     margin: 0;
     padding: 100px 0;
     overflow: hidden;
-    clip-path: polygon(
-      0% 0%,
-      100% 0%,
-      100% 100%,
-      67.9% 100%,
-      40.8% 100%,
-      18.8% 100%,
-      0% 100%
-    );
+    // clip-path: polygon(
+    //   0% 0%,
+    //   100% 0%,
+    //   100% 100%,
+    //   67.9% 100%,
+    //   40.8% 100%,
+    //   18.8% 100%,
+    //   0% 100%
+    // );
     .container {
       padding: 0;
     }

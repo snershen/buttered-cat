@@ -1,10 +1,16 @@
 let what = document.querySelector(".what");
 let whatText = document.querySelector(".what p");
-function whatFadeUp() {
-  what.classList.add("what-differ");
-  whatText.classList.add("whatText-differ");
+
+function whatmove() {
+  if (window.pageYOffset > what.offsetTop - 800) {
+    what.classList.add("what-differ");
+    whatText.classList.add("whatText-differ");
+  } else {
+    what.classList.remove("what-differ");
+    whatText.classList.remove("whatText-differ");
+  }
 }
-what.addEventListener("mousemove", whatFadeUp);
+window.addEventListener("scroll", whatmove);
 
 //AOS import
 AOS.init();

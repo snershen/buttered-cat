@@ -1,8 +1,8 @@
-let what = document.querySelector(".what");
-let whatText = document.querySelector(".what p");
+const what = document.querySelector(".what");
+const whatText = document.querySelector(".what p");
 
 function whatmove() {
-  if (window.pageYOffset > what.offsetTop - 700) {
+  if (window.scrollY > what.offsetTop - 650) {
     what.classList.add("what-differ");
     whatText.classList.add("whatText-differ");
   } else {
@@ -15,7 +15,7 @@ window.addEventListener("scroll", whatmove);
 //AOS import
 AOS.init();
 
-// 3d animation
+// zdog 3d animation
 const blue = "#004C77";
 const yellow = "#F9D555";
 const darkYellow = "edc649";

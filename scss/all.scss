@@ -1,7 +1,7 @@
-@import "reset";
-@import "variable";
-@import "mixin";
-@import "helper";
-@import "base";
-@import "layout";
-@import "index";
+@import "helper/variable";
+@import "helper/mixin";
+@import "vendor/aos";
+@import "base/reset";
+@import "base/base";
+@import "helper/utilities";
+@import "page/index";

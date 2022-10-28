@@ -2,6 +2,11 @@
   max-width: 1140px;
   margin: 0 auto;
   padding: 0 16px;
+  @include mobile {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .container-s {
@@ -23,14 +28,8 @@ footer {
 }
 
 @include mobile {
-  .container {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
   p + p {
     margin-top: 20px;
-    // font-size: 0.7rem;
   }
 }
 
@@ -42,34 +41,26 @@ footer {
 //font-size
 .title-1 {
   font-size: 3rem;
+  @include pad {
+    font-size: 2.5rem;
+  }
+  @include mobile {
+    font-size: 2rem;
+  }
 }
 
 .title-2 {
   font-size: 2.5rem;
+  @include pad {
+    font-size: 2rem;
+  }
+  @include mobile {
+    font-size: 1.5rem;
+  }
 }
 
 .title-3 {
   font-size: 2rem;
-}
-
-@include pad {
-  .title-1 {
-    font-size: 2.5rem;
-  }
-
-  .title-2 {
-    font-size: 2rem;
-  }
-}
-
-@include mobile {
-  .title-1 {
-    font-size: 2rem;
-  }
-
-  .title-2 {
-    font-size: 1.5rem;
-  }
 }
 
 //font-weight

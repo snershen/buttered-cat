@@ -1,46 +1,32 @@
-//h1 element
 h1 {
   position: relative;
   z-index: 10;
-  line-height: 200px;
   font-size: 6rem;
   text-transform: uppercase;
   color: $blue;
-}
-//h1 RWD
-@include pad {
-  h1 {
+  line-height: 200px;
+  @include pad {
     font-size: 4rem;
   }
-}
-@include mobile {
-  h1 {
-    text-align: center;
+  @include mobile {
     font-size: 3rem;
+    text-align: center;
     line-height: 1;
   }
 }
 
-// banner section
 .banner {
   position: relative;
   @include size(100%, 90vh);
   background-color: $blue;
-}
-
-//banner RWD
-@include pad {
-  .banner {
+  @include pad {
     @include size(100%, 700px);
   }
-}
-@include mobile {
-  .banner {
+  @include mobile {
     @include size(100%, 500px);
   }
 }
 
-// butter element
 .butter {
   display: flex;
   justify-content: center;
@@ -49,6 +35,13 @@ h1 {
   @include size(100%, 200px);
   background-color: $yellow;
   border-radius: 0 0 100px 100px;
+  @include pad {
+    border-radius: 0;
+  }
+  @include mobile {
+    @include size(100%, 150px);
+    border-radius: 0;
+  }
   &-melt {
     position: absolute;
     bottom: -80px;
@@ -58,11 +51,26 @@ h1 {
     border-radius: 12px 12px 20px 20px;
     box-shadow: -72px -20px 0 5px $yellow, 40px -50px $yellow,
       -34px 100px 0 4px $blue;
+    @include pad {
+      box-shadow: -72px -20px 0 5px $yellow, -34px 100px 0 4px $blue;
+    }
+    @include mobile {
+      box-shadow: -72px -20px 0 5px $yellow, -34px 110px 0 4px $blue;
+    }
     &:nth-child(2) {
       width: 20px;
       left: 28%;
       bottom: -60px;
       box-shadow: 46px -20px 0 5px $yellow, 20px 130px 0 1px $blue;
+      @include pad {
+        box-shadow: 46px -20px 0 5px $yellow;
+      }
+      @include mobile {
+        width: 20px;
+        left: 28%;
+        bottom: -60px;
+        box-shadow: none;
+      }
     }
     &:nth-child(3) {
       width: 20px;
@@ -70,6 +78,16 @@ h1 {
       bottom: -60px;
       box-shadow: -72px -20px 0 5px $yellow, 40px -30px $yellow,
         70px 30px 0 4px $yellow, -34px 140px 0 14px $blue;
+      @include pad {
+        box-shadow: -72px -20px 0 5px $yellow, 40px -30px $yellow,
+          -34px 140px 0 14px $blue;
+      }
+      @include mobile {
+        width: 20px;
+        left: 55%;
+        bottom: -60px;
+        box-shadow: 40px -30px $yellow;
+      }
     }
     &:nth-child(4) {
       width: 20px;
@@ -77,6 +95,15 @@ h1 {
       bottom: -60px;
       box-shadow: 50px -20px 0 5px $yellow, -30px 20px 0 -3px $yellow,
         22px 130px 0 4px $blue;
+      @include pad {
+        box-shadow: 50px -20px 0 5px $yellow, 22px 130px 0 4px $blue;
+      }
+      @include mobile {
+        width: 20px;
+        left: 88%;
+        bottom: -60px;
+        box-shadow: 50px -20px 0 5px $yellow, 22px 130px 0 4px $blue;
+      }
     }
   }
   &-melt:nth-child(2)::before {
@@ -154,53 +181,6 @@ h1 {
   }
 }
 
-// butter RWD
-@include pad {
-  .butter {
-    border-radius: 0;
-    &-melt {
-      box-shadow: -72px -20px 0 5px $yellow, -34px 100px 0 4px $blue;
-      &:nth-child(2) {
-        box-shadow: 46px -20px 0 5px $yellow;
-      }
-      &:nth-child(3) {
-        box-shadow: -72px -20px 0 5px $yellow, 40px -30px $yellow,
-          -34px 140px 0 14px $blue;
-      }
-      &:nth-child(4) {
-        box-shadow: 50px -20px 0 5px $yellow, 22px 130px 0 4px $blue;
-      }
-    }
-  }
-}
-@include mobile {
-  .butter {
-    @include size(100%, 150px);
-    border-radius: 0;
-    &-melt {
-      box-shadow: -72px -20px 0 5px $yellow, -34px 110px 0 4px $blue;
-      &:nth-child(2) {
-        width: 20px;
-        left: 28%;
-        bottom: -60px;
-        box-shadow: none;
-      }
-      &:nth-child(3) {
-        width: 20px;
-        left: 55%;
-        bottom: -60px;
-        box-shadow: 40px -30px $yellow;
-      }
-      &:nth-child(4) {
-        width: 20px;
-        left: 88%;
-        bottom: -60px;
-        box-shadow: 50px -20px 0 5px $yellow, 22px 130px 0 4px $blue;
-      }
-    }
-  }
-}
-
 //cat element
 .cat {
   position: absolute;
@@ -208,6 +188,21 @@ h1 {
   bottom: 0px;
   transform: translateX(-50%) scale(1.2);
   animation: cat-move 1s infinite alternate;
+  @media screen and (max-width: 1440px) {
+    left: 50%;
+    transform: scale(1);
+    bottom: -30px;
+  }
+  @include pad {
+    left: 50%;
+    transform: scale(0.8);
+    bottom: -30px;
+  }
+  @include mobile {
+    left: 20%;
+    transform: scale(0.5);
+    bottom: calc(-30px * 3);
+  }
   &-face {
     position: relative;
     bottom: 100px;
@@ -326,29 +321,6 @@ h1 {
   }
 }
 
-//cat RWD
-@media screen and (max-width: 1440px) {
-  .cat {
-    left: 50%;
-    transform: scale(1);
-    bottom: -30px;
-  }
-}
-@include pad {
-  .cat {
-    left: 50%;
-    transform: scale(0.8);
-    bottom: -30px;
-  }
-}
-@include mobile {
-  .cat {
-    left: 20%;
-    transform: scale(0.5);
-    bottom: calc(-30px * 3);
-  }
-}
-
 // table section
 .table {
   position: relative;
@@ -363,6 +335,10 @@ h1 {
     align-items: center;
     gap: 16px;
     margin-top: 48px;
+    @include mobile {
+      flex-direction: column;
+      gap: 24px;
+    }
     img {
       margin-right: 16px;
     }
@@ -370,16 +346,7 @@ h1 {
       display: flex;
       align-items: center;
       flex: 1;
-    }
-  }
-}
-// table RWD
-@include mobile {
-  .table {
-    .detail {
-      flex-direction: column;
-      gap: 24px;
-      p {
+      @include mobile {
         width: 100%;
       }
     }
@@ -390,6 +357,9 @@ h1 {
 .question {
   padding: 150px 0 250px;
   pointer-events: none;
+  @include pad {
+    padding: 100px 0;
+  }
   h3 {
     position: absolute;
     bottom: 50px;
@@ -403,6 +373,14 @@ h1 {
     align-items: center;
     position: relative;
     margin: 120px 100px 0;
+    @include pad {
+      margin: 100px 16px;
+      flex-direction: column;
+    }
+    @include mobile {
+      margin: 120px 16px;
+      flex-direction: column;
+    }
     &::before {
       content: "";
       @include size(150px);
@@ -413,6 +391,14 @@ h1 {
       background: linear-gradient(60deg, #64b3f4 0%, #c2e59c 100%);
       border-radius: 50%;
       opacity: 0.5;
+      @include pad {
+        right: 0;
+        top: -100px;
+      }
+      @include mobile {
+        right: 0;
+        top: -100px;
+      }
     }
     &::after {
       content: "";
@@ -424,6 +410,28 @@ h1 {
       background: linear-gradient(60deg, #64b3f4 0%, #c2e59c 100%);
       border-radius: 50%;
       opacity: 0.8;
+      @include pad {
+        content: "";
+        @include size(300px);
+        position: absolute;
+        left: 0px;
+        bottom: -200px;
+        z-index: -1;
+        background: linear-gradient(60deg, #64b3f4 0%, #c2e59c 100%);
+        border-radius: 50%;
+        opacity: 0.8;
+      }
+      @include mobile {
+        content: "";
+        @include size(200px);
+        position: absolute;
+        left: 0px;
+        bottom: -100px;
+        z-index: -1;
+        background: linear-gradient(60deg, #64b3f4 0%, #c2e59c 100%);
+        border-radius: 50%;
+        opacity: 0.8;
+      }
     }
     .card-item {
       display: flex;
@@ -435,73 +443,24 @@ h1 {
       background-color: rgba($white, 0.82);
       border-radius: 20px;
       backdrop-filter: blur(3px);
-      // border-top: $white solid 1px;
-      // border-left: $white solid 1px;
       box-shadow: 0 0 0 5px white, 0 0 0 12px rgba($yellow, 0.8);
-    }
-    p {
-      font-size: 10rem;
-    }
-  }
-}
-
-// question RWD
-@include pad {
-  .question {
-    padding: 100px 0;
-    .card-list {
-      margin: 100px 16px;
-      flex-direction: column;
-      &::before {
-        right: 0;
-        top: -100px;
-      }
-      &::after {
-        content: "";
-        @include size(300px);
-        position: absolute;
-        left: 0px;
-        bottom: -200px;
-        z-index: -1;
-        background: linear-gradient(60deg, #64b3f4 0%, #c2e59c 100%);
-        border-radius: 50%;
-        opacity: 0.8;
-      }
-      .card-item {
+      @include pad {
         @include size(300px, 420px);
       }
-    }
-  }
-}
-@include mobile {
-  .question {
-    .card-list {
-      margin: 120px 16px;
-      flex-direction: column;
-      &::before {
-        right: 0;
-        top: -100px;
-      }
-      &::after {
-        content: "";
-        @include size(200px);
-        position: absolute;
-        left: 0px;
-        bottom: -100px;
-        z-index: -1;
-        background: linear-gradient(60deg, #64b3f4 0%, #c2e59c 100%);
-        border-radius: 50%;
-        opacity: 0.8;
-      }
-      .card-item {
+      @include mobile {
         @include size(250px, 350px);
         padding-top: 80px;
       }
-      img {
-        width: 60%;
-      }
-      p {
+    }
+    p {
+      font-size: 10rem;
+      @include mobile {
         font-size: 5rem;
+      }
+    }
+    img {
+      @include mobile {
+        width: 60%;
       }
     }
   }
@@ -514,6 +473,14 @@ h1 {
   background-color: $yellow;
   transition: 2s;
   overflow: hidden;
+  @include pad {
+    padding: 150px 0;
+  }
+  @include mobile {
+    margin: 0;
+    padding: 100px 0;
+    overflow: hidden;
+  }
   p {
     text-align: center;
     transform: rotate(-10deg);
@@ -523,6 +490,19 @@ h1 {
     transition: 0.5s;
     color: $blue;
     text-transform: uppercase;
+    @include pad {
+      transform: rotate(-5deg);
+      font-size: 5em;
+    }
+    @include mobile {
+      margin: 0 auto;
+      font-size: 3.5rem;
+    }
+  }
+  .container {
+    @include mobile {
+      padding: 0;
+    }
   }
 }
 
@@ -535,47 +515,19 @@ h1 {
   text-shadow: 8px 8px 0 orange;
 }
 
-//what animation
-@include pad {
-  .what {
-    padding: 150px 0;
-    p {
-      transform: rotate(-5deg);
-      font-size: 5em;
-    }
-  }
-}
-@include mobile {
-  .what {
-    margin: 0;
-    padding: 100px 0;
-    overflow: hidden;
-    .container {
-      padding: 0;
-    }
-    p {
-      margin: 0 auto;
-      font-size: 3.5rem;
-    }
-  }
-}
-
 // happen section
 .happen {
   background-color: $blue;
   padding-top: 100px;
   padding-bottom: 300px;
-  .detail {
-    margin-top: 100px;
-  }
-}
-//happen RWD
-@include pad {
-  .happen {
+  @include pad {
     background-color: $blue;
     padding-top: 100px;
     padding-bottom: 150px;
-    .detail {
+  }
+  .detail {
+    margin-top: 100px;
+    @include pad {
       margin-top: 100px;
       margin-bottom: 60px;
     }
@@ -588,10 +540,7 @@ h1 {
   width: 100%;
   background-color: $blue;
   margin: 30px 0;
-}
-//3D model RWD
-@include pad {
-  .zdog-canvas {
+  @include pad {
     margin-top: 100px;
     height: 600px;
   }
@@ -609,13 +558,21 @@ h1 {
     background-position: right -200px;
     background-size: 50%;
     animation: paw-move 1s infinite alternate, none;
+    @include pad {
+      padding: 100px 16px 150px;
+    }
+    @include mobile {
+      background-position: right -100px;
+      background-size: 80%;
+      animation: none;
+    }
     &::before {
       content: "";
       width: 400px;
       height: 400px;
       position: relative;
-      background-color: #fff;
       z-index: 10;
+      background-color: #fff;
       background-color: lighten($yellow, 20%);
       border-radius: 50%;
       right: 150px;
@@ -623,10 +580,21 @@ h1 {
   }
   .title {
     margin-bottom: 100px;
+    @include mobile {
+      margin-bottom: 20px;
+    }
   }
   h2,
   h2 + p {
     width: 40%;
+    @include pad {
+      width: 100%;
+    }
+  }
+  h2 {
+    @include pad {
+      margin-top: 200px;
+    }
   }
   p + p {
     margin-top: 16px;
@@ -638,40 +606,12 @@ h1 {
     right: 50px;
     bottom: 80px;
     transform: rotate(-20deg);
-  }
-}
-//result animation
-@keyframes paw-move {
-  to {
-    background-position: 90% -220px, right -200px;
-  }
-}
-// result RWD
-@include pad {
-  .result {
-    .container {
-      padding: 100px 16px 150px;
-    }
-    h2 {
-      margin-top: 200px;
-    }
-    h2,
-    h2 + p {
-      width: 100%;
+    @include mobile {
+      right: 10px;
+      font-size: 0.85rem;
     }
   }
-}
-@include mobile {
-  .result {
-    background-color: $yellow;
-    .container {
-      background-position: right -100px;
-      background-size: 80%;
-      animation: paw-move 1s infinite alternate, none;
-    }
-    .title {
-      margin-bottom: 20px;
-    }
+  @include mobile {
     img {
       display: block;
       margin: 0 auto;
@@ -679,14 +619,16 @@ h1 {
     img + img {
       width: 50%;
     }
-    &-text {
-      right: 10px;
-      font-size: 0.85rem;
-    }
   }
-  @keyframes paw-move {
-    to {
-      background-position: right -100px;
+}
+//result animation
+@keyframes paw-move {
+  to {
+    background-position: 90% -220px, right -200px;
+    @include mobile {
+      to {
+        background-position: right -100px;
+      }
     }
   }
 }
